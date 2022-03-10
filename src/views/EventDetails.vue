@@ -7,22 +7,20 @@
 </template>
 
 <script>
-import EventService from '@/services/EventService.js'
 export default {
   props: ['id'],
-  data() {
-    return {
-      event: null
-    }
-  },
   created() {
-    EventService.getEvent(this.id)
-      .then(response => {
-        this.event = response.data
+    this.$store.dispatch('fetchEvent', this.id).catch(error => {
+      this.$route.push({
+        name: 'ErrorDisplay',
+        params: { error }
       })
-      .catch(error => {
-        console.log(error)
-      })
+    })
+  },
+  computed: {
+    event() {
+      return this.$store.state.event
+    }
   }
 }
 </script>

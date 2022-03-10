@@ -29,6 +29,16 @@
       "date": "July 22, 2022",
       "time": "11:00",
       "organizer": "Carey Wales"
+    },
+    {
+      "id": "7ebc6df7-3dc9-40e7-a841-875f41a5c02d",
+      "category": "",
+      "title": "Horse Brush Racing",
+      "description": "A fun event",
+      "location": "New York",
+      "date": "August 18, 2024",
+      "time": "3:00",
+      "organizer": "Adam Jahr"
     }
   ]
 }
